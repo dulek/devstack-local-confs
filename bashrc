@@ -3,7 +3,6 @@ alias krc='kss delete pod `kss get pods | grep kuryr-controller | cut -d " " -f 
 alias watch="watch "
 alias openrc="source /opt/stack/devstack/openrc admin admin"
 alias stack="/opt/stack/devstack/stack.sh"
-alias unstack="/opt/stack/unstack.sh"
 
 alias sc="sudo systemctl"
 alias jc="sudo journalctl"
@@ -17,7 +16,6 @@ function unstack {
     sudo umount `mount | grep kube | cut -d " " -f 3`
     sudo rm -rf /var/lib/docker && sudo rm -rf /opt/stack/data
     sudo rm -rf /etc/octavia
-
 }
 
 function jdf {
@@ -31,3 +29,4 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+openrc
