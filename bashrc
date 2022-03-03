@@ -25,8 +25,7 @@ function jdf {
 function sd {
     sudo systemctl $1 devstack@"$2"
 }
-export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 openrc
